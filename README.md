@@ -31,7 +31,6 @@ $.ajax({
   success: success,
   dataType: dataType
 });
-##prue
 ```
 
 The success callback function is passed the returned data, which will be an XML root element, text string, JavaScript file, or JSON object, depending on the MIME type of the response. It is also passed the text status of the response.
@@ -39,3 +38,18 @@ The success callback function is passed the returned data, which will be an XML 
 # Heroku 
 https://cvsajax.herokuapp.com/
 
+##Desarrollo de la Práctica
+
+* [Descripción de la práctica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=189370)
+* [Repositorio](https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-ericconi)
+
+##Despliegue
+
+ * [Heroku](https://comma-separated-values.herokuapp.com/)
+  
+  
+
+## Enlaces a webs personales
+
+* [Constanza](http://alu0100673647.github.io)
+* [Eric](http://alu0100786330.github.io)
