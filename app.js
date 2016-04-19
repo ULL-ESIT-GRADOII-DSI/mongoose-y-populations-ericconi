@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 const calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {     
-  response.render('index', { title: "AJAX"});
+  response.render('index', { title: "ajax-emac6"});
 });
 
 app.get('/csv', (request, response) => {
