@@ -26,22 +26,21 @@ const fillTable = (data) => {
  * #original el contenido del fichero fileName */
 const dump = (fileName) => {
    $.get(fileName, function (data) {
-              $("#original").val(data);
+        $("#original").val(data);
     });
 };
  
 const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  
-  var files = evt.target.files;
+
+  var files = evt.target.files; 
 
   var reader = new FileReader();
-  reader.onload = (x) => {
-    $("#original").value(x.target.result);
+  reader.onload = (e) => {
+    $("#original").val(e.target.result);
   };
-
-  reader.readAsText(files[0]);
+  reader.readAsText(files[0])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
@@ -53,7 +52,6 @@ const handleDragFileSelect = (evt) => {
 
   var reader = new FileReader();
   reader.onload = (e) => {
-
     $("#original").val(e.target.result);
     evt.target.style.background = "white";
   };
