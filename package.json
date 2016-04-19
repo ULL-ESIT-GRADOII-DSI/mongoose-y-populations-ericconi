@@ -1,5 +1,5 @@
 {
-  "name": "PL_practica2",
+  "name": "DSI_practica2",
   "version": "1.0.0",
   "description": "Analizador de cadenas csv usando AJAX",
   "main": "csv.js",
@@ -8,18 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-ericconi"
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
-  "contributors": [],
+  "author": "Eric y Cony",
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-ericconi"
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-ericconi",
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
@@ -29,7 +28,7 @@
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node" : ">=0.10.3 <0.12" 
   },
   "devDependencies": {
   }

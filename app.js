@@ -13,14 +13,14 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-const calculate = require('XXXXXXXXXXXXXXXXXX');
+const calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {     
-  XXXXXXXXXXXXXXXXXXXXXXXX X XXXXXX XXXX XXXXXXXXX XXX
+  response.render('index', { title: "AJAX"});
 });
 
 app.get('/csv', (request, response) => {
-  XXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
+  response.send({ "rows": calculate(request.query.textocsv) });
 });
 
 app.listen(app.get('port'), () => {
