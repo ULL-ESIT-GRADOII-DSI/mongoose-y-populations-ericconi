@@ -15,6 +15,25 @@ body {
   background: linear-gradient(to right, #d4e4ef 16%, #a1c1d8 33%, rgba(134, 174, 204, 0.9) 42%, rgba(134, 174, 204, 0.27) 96%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 ); }
 
+table.center {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-left: 90px;
+  margin-top: 10px;
+  border: ridge;
+  border-color: blue;
+  background-color: white; }
+
+.output tr:nth-child(odd) {
+  background-color: #eee; }
+
+.output tr:nth-child(even) {
+  background-color: #00FF66; }
+
+.error td {
+  background-color: red; }
+
 parse {
   background-color: #4CAF50;
   color: white;
@@ -34,24 +53,5 @@ input3 {
   background-color: #6600cc;
   font-color: white;
   border-radius: 4px; }
-
-table.center {
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  margin-left: 90px;
-  margin-top: 10px;
-  border: ridge;
-  border-color: blue;
-  background-color: white; }
-
-.output tr:nth-child(odd) {
-  background-color: #eee; }
-
-.output tr:nth-child(even) {
-  background-color: #00FF66; }
-
-.error td {
-  background-color: red; }
 
 /*# sourceMappingURL=style_css.css.map */

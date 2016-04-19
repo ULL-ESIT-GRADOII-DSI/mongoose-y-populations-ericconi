@@ -18,12 +18,14 @@ const resultTemplate = `
 `;
 
 /* Volcar la tabla con el resultado en el HTML */
+
 const fillTable = (data) => { 
   $("#finaltable").html(_.template(resultTemplate, { rows: data.rows })); 
 };
 
 /* Volcar en la textarea de entrada 
  * #original el contenido del fichero fileName */
+ 
 const dump = (fileName) => {
    $.get(fileName, function (data) {
         $("#original").val(data);
@@ -44,6 +46,7 @@ const handleFileSelect = (evt) => {
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
+
 const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
@@ -71,6 +74,7 @@ $(document).ready(() => {
     }
 
     /* Request AJAX para que se calcule la tabla */
+    
     $("#parse").click( () => {
         if (window.localStorage) localStorage.original = original.value;
         $.get("/csv",
@@ -79,7 +83,9 @@ $(document).ready(() => {
           'json'
         );
     });
+    
    /* botones para rellenar el textarea */
+   
    $('button.example').each((index, element) => {
      $(element).click(() => {
         dump(`${$(element).text()}.txt`);
@@ -88,6 +94,7 @@ $(document).ready(() => {
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
+    
     let dropZone = $('.drop_zone')[0];
     dropZone.addEventListener('dragover', handleDragOver, false);
     dropZone.addEventListener('drop', handleDragFileSelect, false);
