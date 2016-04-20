@@ -42,8 +42,8 @@ const handleFileSelect = (evt) => {
   reader.onload = (e) => {
     $("#original").val(e.target.result);
   };
-  reader.readAsText(files[0])
-}
+  reader.readAsText(files[0]);
+};
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
 
@@ -58,14 +58,14 @@ const handleDragFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "white";
   };
-  reader.readAsText(files[0])
-}
+  reader.readAsText(files[0]);
+};
 
 const handleDragOver = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
   evt.target.style.background = "yellow";
-}
+};
 
 $(document).ready(() => {
     let original = document.getElementById("original");
