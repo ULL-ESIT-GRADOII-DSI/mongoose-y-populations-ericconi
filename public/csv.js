@@ -91,7 +91,16 @@ $(document).ready(() => {
         dump(`${$(element).text()}.txt`);
       });
    });
-
+   
+  /* boton guardar */
+  var btn_save;
+  $(document).ready(function(){
+    $("button.save").click(function(){
+      btn_save = document.getElementById("original"); // se supone que con esto guardo en btn_save lo que hay en original q es el textarea
+      alert('contendio' + btn_save);
+    });
+  });
+  
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     
