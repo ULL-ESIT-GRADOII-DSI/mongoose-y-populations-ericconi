@@ -11,7 +11,7 @@
 
 # Heroku 
 
-* [Despliegue](https://ajax-ecma6.herokuapp.com/)
+* [Despliegue]()
 
 ## Enlaces a webs personales
 
