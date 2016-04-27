@@ -20,16 +20,17 @@
   },
   "homepage": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-ericconi",
   "dependencies": {
-	"jquery": "*",
+    "jquery": "*",
     "underscore": "*",
-	"express": "~3.2.6",
+    "express": "~3.2.6",
     "ejs": "*",
     "body-parser": "~1.12.0",
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node" : "4.2.4" 
+    "node": "4.2.4"
   },
   "devDependencies": {
+    "gulp-gh-pages": "^0.5.4"
   }
 }

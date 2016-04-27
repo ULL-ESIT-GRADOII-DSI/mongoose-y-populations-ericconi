@@ -68,12 +68,13 @@ const handleDragOver = (evt) => {
 };
 
 $(document).ready(() => {
+    let contador = 3;
     let original = document.getElementById("original");
     if (window.localStorage && localStorage.original && original) {
       original.value = localStorage.original;
     }
 
-    /* Request AJAX para que se calcule la tabla */
+    /* Request AJAX para que se calcule la tabla 
     
     $("#parse").click( () => {
         if (window.localStorage) localStorage.original = original.value;
@@ -83,23 +84,52 @@ $(document).ready(() => {
           'json'
         );
     });
-    
-   /* botones para rellenar el textarea */
+    */
+
    
-   $('button.example').each((index, element) => {
-     $(element).click(() => {
-        dump(`${$(element).text()}.txt`);
+  /* boton guardar 
+  $("save").click( () => {
+    $.get("", { nombre:)
+  }
+  */
+  
+  /* boton para guardar el contenido del textarea */
+   $("#save").click(() => {
+          $.get("/mongo/", {
+            name: $("#fname").val(),
+            content: $("#original").val()
+          });
+           var non = $("#fname").val();
+           var r= $('<button class="example" type="button" id="' + non +  '">'+ non + '</button>');
+           $(".examples").append(r);
+           
+       $('button.example').each( (_,y) => {
+       $(y).click( () => { 
+         $.get("/findMongo",{name: $(y).text()},(readData) => {
+           $("#original").val(readData[0].data);
+         });
+        });
       });
+          
+         
+    });
+
+   /* botones para rellenar el textarea */
+   $('button.example').each( (_,y) => {
+     $(y).click( () => { 
+       $.get("/findMongo",{name: $(y).text()},(readData) => {
+         $("#original").val(readData[0].data);
+       });
+     });
    });
    
-  /* boton guardar */
-  var btn_save;
-  $(document).ready(function(){
-    $("button.save").click(function(){
-      btn_save = document.getElementById("original"); // se supone que con esto guardo en btn_save lo que hay en original q es el textarea
-      alert('contendio' + btn_save);
+   
+   $.get("/showButtons", {}, (readData) => {
+      for (var i = 0; i < readData.length; i++) {
+          $('button.example').get(i).className = "example";
+      }
     });
-  });
+  
   
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
