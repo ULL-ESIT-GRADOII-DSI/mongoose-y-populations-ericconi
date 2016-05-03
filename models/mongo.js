@@ -5,6 +5,16 @@
     mongoose.connect('mongodb://localhost/inputs'); 
     
     let Schema = mongoose.Schema;
+    
+    /* Esquema de la base de datos para usuarios */
+    
+    let Schema_user = mongoose.Schema_user;
+    
+    let User = new Schema_user({
+        name: String
+    });
+    
+    
    /*Esquema de la base de datos para la practica csv con mongodb*/ 
     let Datos = new Schema({
       name: String,
